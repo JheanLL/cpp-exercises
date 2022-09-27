@@ -1,0 +1,40 @@
+Guardar en la lista
+Nodo *aux2 = lista;
+ ofstream f2;
+ f2.open("lista.txt",ios::app);
+ while(aux2->siguiente!=NULL){
+  	aux2=aux2->siguiente;
+  }
+ f2<<aux2->name<<" "<<aux2->dir<<"\n";	
+ 
+ f2.close();
+
+cargar lista
+
+ ifstream f1;
+ f1.open("lista.txt",ios::in);
+
+  while(!f1.eof()){	
+	f1>>name;
+	f1>>dir;
+	if(!f1.eof()){
+		 Nodo *actual2 = new Nodo();
+			strcpy(actual2->name,name);
+			strcpy(actual2->dir,dir);
+			actual2->siguiente=NULL;
+				  
+			Nodo *aux1 = lista;
+ 
+			 if(aux1 == NULL){
+			  lista = actual2;
+			 }
+			 else{
+			  while(aux1->siguiente!=NULL){
+			  	aux1=aux1->siguiente;
+			  }
+			  aux1->siguiente = actual2;
+			 }
+		}
+   }
+ f1.close();
+ 
