@@ -470,7 +470,7 @@ void imprimir(nodo *&aux){
 	fecha=localtime(&t);
 	ofstream f2;
 	f2.open("Imprimir.txt",ios::out);
-	f2<<"	                    UNIVERSIDAD NACIONAL DE UCAYALI"<<endl<<endl;
+	f2<<"	                    UNIVERSIDAD NACIONAL"<<endl<<endl;
 	f2<<"CARNET DE ESTUDIANTE  "<<endl;
 	f2<<"  Facultad: Ingenieria de sistemas e ingenieria civil"<<endl;
 	f2<<"  Escuela:  Ingenieria de sistemas                           "<<fecha->tm_mday<<"/"<<fecha->tm_mon+1<<"/"<<fecha->tm_year+1900<<"  "<<fecha->tm_hour<<":"<<fecha->tm_min<<":"<<fecha->tm_sec<<endl;
